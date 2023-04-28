@@ -19,6 +19,10 @@ app.use(cors());
 
 app.use("/transaction", TransactionRouter);
 
+app.get("/", (req, res) => {
+  res.send("API OK");
+});
+
 try {
   app.listen(port, () => {
     console.log(`Server was running on ${port}`);
